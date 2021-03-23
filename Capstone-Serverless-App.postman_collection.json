@@ -1,0 +1,129 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Capstone-Serverless-App",
+		"_postman_id": "5c50f535-fad6-e259-4f9e-af5eb4c2b479",
+		"description": "Test user 1 (used for 'authToken' variable):\n    Email: hello@gmail.com\n    Password: Fancypass123\n\nTest user 2:\n    Email: cats@gmail.com\n    Password: Fancymeow123",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Daily-Notes",
+			"description": "",
+			"item": [
+				{
+					"name": "Get all notes",
+					"request": {
+						"url": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/notes",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create note",
+					"request": {
+						"url": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/notes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Learn Agile\",\n\t\"dayOfWeek\": \"Monday\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update note",
+					"request": {
+						"url": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/notes/{{updateId}}",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Learn Java\",\n\t\"dayOfWeek\": \"Tuesday\",\n\t\"done\": true\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete note",
+					"request": {
+						"url": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/notes/{{deleteId}}",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"url": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/notes/{{attachmentId}}/attachment",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
