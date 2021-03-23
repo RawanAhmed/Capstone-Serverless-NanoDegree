@@ -11,13 +11,13 @@ Serverless daily notes you can add it name and days also uplaod photos.
 - [x] **can edit data and delete notes also**
 
 ### Images
-![Alt text](images/1.jpg?raw=true "Image 1")
+![Alt text](images/1.png?raw=true "Image 1")
 
-![Alt text](images/2.jpg?raw=true "Image 2")
+![Alt text](images/2.png?raw=true "Image 2")
 
-![Alt text](images/3.jpg?raw=true "Image 3")
+![Alt text](images/3.png?raw=true "Image 3")
 
-![Alt text](images/4.jpg?raw=true "Image 4")
+![Alt text](images/4.png?raw=true "Image 4")
 
 
 The application consists of a frontend and backend.
